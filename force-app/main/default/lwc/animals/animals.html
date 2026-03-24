@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Animals" icon-name="custom:custom4">
+        <div class="container">
+            <template for:each={animals} for:item="animal">
+                <div key={animal.id} class="gallery-item">
+                    <img src={animal.url} alt="animal image"/>
+                </div>  
+            </template>
+        </div>
+    </lightning-card>
+</template>

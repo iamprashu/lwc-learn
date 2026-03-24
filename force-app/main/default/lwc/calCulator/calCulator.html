@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Calculator" icon-name="utility:calculator">
+        <div >
+            <lightning-input label="Number 1" type="number" value={num1} onchange={handleNum1}></lightning-input>
+            <lightning-input label="Number 2" type="number" value={num2} onchange={handleNum2}></lightning-input>
+            <lightning-combobox
+                label="Operator"
+                value={operator}
+                options={options}
+                onchange={handleOperator}>
+            </lightning-combobox>
+            <lightning-button label="Calculate" onclick={handleCalculate} ></lightning-button>
+            <template if:true={result}>
+                <p >Result: {result}</p>
+            </template>
+        </div>
+    </lightning-card>
+</template>

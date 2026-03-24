@@ -1,0 +1,23 @@
+<template>
+    <lightning-card icon-name="standard:account" variant="base">
+     <lightning-input 
+       type="text"
+       label="Enter Query"
+     ></lightning-input>
+     <lightning-button 
+       variant="base"
+       label="Get News" 
+       onclick={process} 
+     ></lightning-button>
+
+     <template if:true={response}>
+             <template for:each={response} for:item="article">
+                 <li key={article.author}>
+                     
+                 </li>
+             </template>
+     </template>
+    </lightning-card>
+
+    
+</template>

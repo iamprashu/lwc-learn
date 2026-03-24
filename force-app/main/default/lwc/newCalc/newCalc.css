@@ -1,0 +1,68 @@
+.calculator {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    max-width: 280px;
+    margin: 40px auto;
+    padding: 20px;
+    background: linear-gradient(145deg, #6e6e6e, #5a5a5a);
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+  }
+
+  /* Base button style */
+  .calc-btn {
+    --sds-c-button-radius-border: 10px;
+    --sds-c-button-color-background: #1c1c1e;
+    --sds-c-button-text-color: #ffffff;
+
+    height: 55px;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+
+    transition: all 0.2s ease-in-out;
+  }
+
+  /* Hover + active effects */
+  .calc-btn:hover {
+    --sds-c-button-color-background: #0a84ff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .calc-btn:active {
+    transform: scale(0.96);
+    box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.4);
+  }
+
+  /* Operator buttons */
+  .calc-btn[label="+"],
+  .calc-btn[label="-"],
+  .calc-btn[label="*"],
+  .calc-btn[label="/"] {
+    --sds-c-button-color-background: #ff9f0a;
+  }
+
+  /* Clear button */
+  .calc-btn[label="C"] {
+    --sds-c-button-color-background: #ff453a;
+  }
+
+  /* Optional: Equal button highlight */
+  .calc-btn[label="="] {
+    --sds-c-button-color-background: #34c759;
+  }
+
+  /* Responsive tweak */
+  @media (max-width: 400px) {
+    .calculator {
+      max-width: 90%;
+      padding: 15px;
+    }
+
+    .calc-btn {
+      height: 50px;
+      font-size: 16px;
+    }
+  }

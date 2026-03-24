@@ -1,0 +1,36 @@
+li {
+    list-style: none;
+    transition: background 0.2s ease;
+}
+
+li:hover {
+    background-color: #f3f3f3;
+}
+
+li img {
+    margin-right: 8px;
+    border-radius: 6px;
+}
+
+.image-container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.image-container img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.slds-modal__container {
+    max-width: 600px;
+    width: 90%;
+}
+
+.slds-modal__content p {
+    margin-bottom: 8px;
+}

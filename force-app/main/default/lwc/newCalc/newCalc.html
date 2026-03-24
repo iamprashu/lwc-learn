@@ -1,0 +1,24 @@
+<template>
+        <lightning-card icon-name="standard:account" variant="base">
+          <div slot="title">
+              <h1>Calculator</h1>
+          </div>
+
+          <div>
+            <lightning-input label="Display" type="number" value={num1} onchange={handleNum1} disabled="true"></lightning-input>
+            <hr>
+           <div class="calculator">
+            <template for:each={buttons} for:item="btn">
+                <lightning-button
+                key={btn}
+                label={btn}
+                variant="base"
+                onclick={handleClick}
+                class="calc-btn"
+                ></lightning-button>
+            </template>
+</div>
+          </div>
+         
+        </lightning-card>
+</template>
