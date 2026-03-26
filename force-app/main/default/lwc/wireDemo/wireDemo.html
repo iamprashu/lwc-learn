@@ -1,0 +1,10 @@
+<template>
+    <!-- tables of data -->
+        <template if:true={name}>
+           <lightning-datatable 
+            key-field="Id"
+            data={name}
+            columns={column}>
+            </lightning-datatable>
+        </template>
+</template>

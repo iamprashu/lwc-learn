@@ -1,0 +1,11 @@
+<template>
+        <template if:true={connData}>
+            <lightning-datatable
+              key-field="id"
+              data={connData}
+              columns={columns}
+              show-row-number-column=true,
+              hide-checkbox-column=true
+            ></lightning-datatable>
+        </template>
+</template>

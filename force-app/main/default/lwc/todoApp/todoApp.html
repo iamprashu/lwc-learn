@@ -1,0 +1,9 @@
+<template>
+    <lightning-input label="Enter task" class="taskInput"></lightning-input>
+
+    <lightning-button label="Add Task" onclick={addTask}></lightning-button>
+
+    <template for:each={tasks} for:item="task">
+        <p key={task.id}>{task.name}</p>
+    </template>
+</template>

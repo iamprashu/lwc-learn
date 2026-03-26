@@ -19,6 +19,11 @@
                     </li>
                 </template>
             </ul>
+            <lightning-button 
+              variant="success"
+              label="More Items" 
+              onclick={getNextItems} 
+            ></lightning-button>
         </template>
 
        <template if:true={showModal}>
