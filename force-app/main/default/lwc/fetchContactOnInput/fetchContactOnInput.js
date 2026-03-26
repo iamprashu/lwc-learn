@@ -18,9 +18,11 @@ export default class FetchContactOnInput extends LightningElement {
 
         getContact({ s: data })
             .then(result => {
-                console.log('Result:', result);  
+               setTimeout(() => {
+                 console.log('Result:', result);  
                 this.allCons = result;
                 this.loading = false;
+               }, 5000);
                 
             })
             .catch(error => {

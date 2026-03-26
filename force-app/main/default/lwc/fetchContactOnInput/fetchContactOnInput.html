@@ -1,6 +1,9 @@
 <template>
-    <template if:true={loading}>
-        <p>Please Wait Data Is Loading.......</p>
+    <template if:true={loading} >
+       <div class="loader">
+        <img src="fetchContactOnInput.svg" alt="">
+         <p >Please Wait Data Is Loading.......</p>
+       </div>
     </template>
 
     <template if:false={loading} > 
@@ -10,11 +13,10 @@
       label="Enter Email Or Name"
     ></lightning-input>
 
-    <lightning-button 
-      variant="base"
-      label="Search" 
+    <button 
+    class="search"
       onclick={getData} 
-    ></lightning-button>
+    >Search</button>
     </template>
 
     <template if:true={allCons}>
