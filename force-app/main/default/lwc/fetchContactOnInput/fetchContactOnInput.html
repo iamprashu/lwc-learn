@@ -1,0 +1,28 @@
+<template>
+    <template if:true={loading}>
+        <p>Please Wait Data Is Loading.......</p>
+    </template>
+
+    <template if:false={loading} > 
+        <lightning-input 
+        class="query"
+      type="text"
+      label="Enter Email Or Name"
+    ></lightning-input>
+
+    <lightning-button 
+      variant="base"
+      label="Search" 
+      onclick={getData} 
+    ></lightning-button>
+    </template>
+
+    <template if:true={allCons}>
+      <lightning-datatable
+        key-field="Id"
+        data={allCons}
+        columns={cols}
+      ></lightning-datatable>
+    </template>
+    
+</template>
