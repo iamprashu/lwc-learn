@@ -1,0 +1,46 @@
+<template>
+    <lightning-card icon-name="standard:account" variant="base">
+      <div slot="title">
+          Card Title
+      </div>
+      <div class="data">
+        <lightning-input 
+          type="text"
+          label="Enter First Name"
+          class="firstName"
+        ></lightning-input>
+
+         <lightning-input 
+          type="text"
+          class="lastName"
+          label="Enter Last Name"
+        ></lightning-input>
+
+         <lightning-input 
+          type="email"
+          class="email"
+          label="Enter Email"
+        ></lightning-input>
+
+         <lightning-input 
+          type="phone"
+          class="phone"
+          label="Enter Phone"
+        ></lightning-input>
+
+         <lightning-input 
+          type="text"
+          class="title"
+          label="Title"
+        ></lightning-input>
+
+        <lightning-button 
+          variant="success"
+          label="Show Data" 
+          onclick={handleClick} 
+        ></lightning-button>
+        
+        <p if:true={para}>You Entered {para}</p>
+      </div>
+    </lightning-card>
+</template>
