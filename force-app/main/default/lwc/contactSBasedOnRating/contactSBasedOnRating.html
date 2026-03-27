@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Related Contacts" icon-name="standard:contact">
+
+        <template if:true={hasContacts}>
+            <lightning-datatable
+                key-field="Id"
+                data={contacts}
+                columns={columns}>
+            </lightning-datatable>
+        </template>
+
+        <template if:false={hasContacts}>
+            <p style="padding:10px;">
+                Condition Not Done
+            </p>
+        </template>
+
+    </lightning-card>
+</template>

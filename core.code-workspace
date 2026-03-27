@@ -1,0 +1,19 @@
+{
+  "folders": [
+    {
+      "path": "e:/CA/lwc-learn"
+    }
+  ],
+  "settings": {
+    "eslint.workingDirectories": [
+      "e:/CA/lwc-learn"
+    ],
+    "eslint.validate": [
+      "javascript",
+      "typescript"
+    ],
+    "eslint.options": {
+      "overrideConfigFile": "e:\\CA\\lwc-learn\\.eslintrc.json"
+    }
+  }
+}

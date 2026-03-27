@@ -27,6 +27,7 @@ export default class TodoApp extends LightningElement {
 
     removeTask(event) {
         const rm = Number(event.currentTarget.dataset.id);
+        console.log(rm);
 
         this.tasks = this.tasks.filter(
             eachElement => eachElement.id !== rm
