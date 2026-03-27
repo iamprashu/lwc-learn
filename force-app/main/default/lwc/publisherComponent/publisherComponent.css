@@ -1,0 +1,31 @@
+.scroll-container {
+    max-height: 250px;  
+    overflow-y: auto;
+    padding: 8px;
+}
+
+.scroll-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
+}
+
+.account-btn {
+    width: 100%;
+    text-align: left;
+    padding: 10px 12px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 8px;
+    background-color: #f3f6fb;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.account-btn:hover {
+    background-color: #e0ebff;
+    transform: translateX(3px);
+}

@@ -1,0 +1,51 @@
+.opp-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 6px 10px;
+    border-radius: 8px;
+    background-color: #f4f6f9;
+    border-left: 4px solid #2e844a;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+}
+
+.stage {
+    font-size: 11px;
+    color: #666;
+}
+
+.opp-name {
+    font-weight: 600;
+}
+
+.amount {
+    font-size: 14px;
+    font-weight: 700;
+    color: #2e844a;
+}
+
+.loading {
+    background-color: #ff9100;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 20px;
+    width: fit-content;
+    margin: 10px;
+    font-size: 14px;
+}
+
+
+.empty {
+    background-color: cadetblue;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    width: fit-content;
+    margin: 10px;
+    font-size: 14px;
+}

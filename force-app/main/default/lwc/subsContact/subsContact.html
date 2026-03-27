@@ -1,14 +1,23 @@
 <template>
     <lightning-card title="Contacts">
         <template if:true={loading}>
-            <p style="background-color: red; font-size:large">Loading.................</p>
+            <div class="loading">
+                Please Wait...
+            </div>
         </template>
-        <template if:false={loading}>
+        <template if:true={hasContacts}>
             <template for:each={contacts} for:item="con">
-                <p key={con.Id}>
-                    {con.Name} - {con.Email}
-                </p>
+                <div key={con.Id} class="contact-item">
+                    <div class="name">{con.Name}</div>
+                    <div class="email">{con.Email}</div>
+                </div>
             </template>
         </template>
+        <template if:true={noContacts}>
+            <div class="empty">
+                No Contacts Found
+            </div>
+        </template>
+
     </lightning-card>
 </template>

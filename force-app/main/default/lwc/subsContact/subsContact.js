@@ -27,4 +27,12 @@ export default class SubsContact extends LightningElement {
                 this.loading = false;
             });
     }
+
+    get hasContacts() {
+        return this.contacts && this.contacts.length > 0;
+    }
+
+    get noContacts() {
+        return !this.loading && (!this.contacts || this.contacts.length === 0);
+    }
 }
