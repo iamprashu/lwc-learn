@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Contacts">
+        <template if:true={loading}>
+            <p style="background-color: red; font-size:large">Loading.................</p>
+        </template>
+        <template if:false={loading}>
+            <template for:each={contacts} for:item="con">
+                <p key={con.Id}>
+                    {con.Name} - {con.Email}
+                </p>
+            </template>
+        </template>
+    </lightning-card>
+</template>

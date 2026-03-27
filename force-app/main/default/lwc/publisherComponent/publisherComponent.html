@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Accounts">
+        <template for:each={accounts.data} for:item="acc">
+            <p key={acc.Id}>
+                <button data-id={acc.Id} onclick={handleClick}>
+                    {acc.Name}
+                </button>
+            </p>
+        </template>
+    </lightning-card>
+</template>
