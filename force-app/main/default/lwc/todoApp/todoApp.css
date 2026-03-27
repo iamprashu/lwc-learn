@@ -1,0 +1,6 @@
+.taskTab{
+    display: flex;
+    width: 50vw;
+    align-items: center;
+    padding: 5px;
+}

@@ -4,6 +4,17 @@
     <lightning-button label="Add Task" onclick={addTask}></lightning-button>
 
     <template for:each={tasks} for:item="task">
-        <p key={task.id}>{task.name}</p>
+        <div key={task.id} class="taskTab">
+               <div style="display: flex; gap: 5px;">
+                    <p style="font-weight: bold;">{task.id}. {task.name}</p>
+                    <lightning-button 
+                    data-id={task.id}
+                    variant="destructive"
+                    label="Delete" 
+                    onclick={removeTask} 
+                    ></lightning-button>
+               </div>
+
+        </div>
     </template>
 </template>
