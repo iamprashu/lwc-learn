@@ -1,0 +1,18 @@
+<template>
+    <lightning-card icon-name="" variant="base">
+      <div slot="title">
+          Conditional Rendering In Lwc
+      </div>
+      <template if:true={clicked}>
+        <p style="font-weight:bold; padding:10px">
+            The Button is clicked.
+        </p>
+      </template>
+      <lightning-button 
+        variant="Success"
+        class="btn"
+        label="Click Me"
+        onclick={handleClick} 
+      ></lightning-button>
+    </lightning-card>
+</template>
