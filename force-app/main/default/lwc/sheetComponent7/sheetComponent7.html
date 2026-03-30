@@ -1,0 +1,30 @@
+<template>
+   
+    <lightning-card icon-name="standard:account" variant="base">
+      <div slot="title">
+          All Accounts in this Org.
+      </div>
+
+      <template if:true={loading}>
+          <lightning-spinner style="position: relative;
+    display: inline-block;
+    width: 80px;
+    height: 80px;" alternative-text="Loading..." size="medium"></lightning-spinner>
+        <p style="background-color: rgb(184, 56, 56); color:rgb(0, 255, 255); font-size:large; font-weight:bold">Loading Data Please Wait.</p>
+      </template>
+
+      <template if:true={error}>
+        <p>{error}</p>
+      </template>
+
+     <template if:true={hasAccounts}>
+         <lightning-datatable
+        key-field="Id"
+        data={allAccounts}
+        columns={col}
+      ></lightning-datatable>
+     </template>
+
+
+    </lightning-card>
+</template>
