@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Accounts">
+        <div class="scroll-container">
+            <template for:each={accounts.data} for:item="acc">
+                <button 
+                    key={acc.Id} 
+                    data-id={acc.Id} 
+                    class="account-btn"
+                    onclick={handleClick}>
+                    {acc.Name}
+                </button>
+            </template>
+        </div>
+    </lightning-card>
+</template>

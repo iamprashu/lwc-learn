@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="LMS Pub Sub">
+        <div class="slds-p-around_medium">
+            <lightning-button 
+                label="Publish Event"
+                onclick={publishEvent}>
+            </lightning-button>
+
+            <p class="slds-m-top_medium">
+                Received Message: {receivedMessage}
+            </p>
+        </div>
+    </lightning-card>
+</template>
