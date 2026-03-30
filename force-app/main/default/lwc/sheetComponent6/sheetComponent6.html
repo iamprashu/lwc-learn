@@ -1,0 +1,26 @@
+<template>
+    <lightning-card icon-name="standard:account" variant="base">
+      <div slot="title">
+          All Contact By Account
+      </div>
+      <div>
+        <lightning-combobox
+            label="Select Account"
+            options={accountOptions}
+            onchange={accountSelected}>
+        </lightning-combobox>
+      </div>
+
+      <template if:true={loading}>
+        <p style="padding:10px; background-color : rgb(226, 84, 84); color:rgb(0, 0, 0); width:300px; border-radius:10px;">Please Wait While we load data......</p>
+      </template>
+
+      <template if:true={contactError}>
+            <lightning-datatable
+              key-field="Id"
+              data={allContacts}
+              columns={cols}
+            ></lightning-datatable>
+      </template>
+    </lightning-card>
+</template>
